@@ -1,6 +1,6 @@
 
 #include "averager.h";
-int ScaledtoHertz = 0;
+int scaledToHertz = 0;
 byte interruptPin = 2;// can be pin 2 or 3
 unsigned long lasttime;
 unsigned long timesincelast = 0;
@@ -23,8 +23,8 @@ void setup() {
 }
 
 void loop() {
-  ScaledtoHertz = (60 * 1000000 / cycleTime()) / 60; //scaled to output cycles per second, or Hz
-  Serial.print(ScaledtoHertz);
+  scaledToHertz = (60 * 1000000 / cycleTime()) / 60; //scaled to output cycles per second, or Hz
+  Serial.print(scaledToHertz);
   Serial.println(" Hz");
 }
 
